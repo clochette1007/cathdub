@@ -12,9 +12,9 @@ export default function HomePage() {
       <Section id="presentation" className="bg-white">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="section-title">Une approche douce & personnalisée</h2>
+            <h2 className="section-title">Une approche douce &amp; personnalisée</h2>
             <p className="text-stone-600 leading-relaxed mb-4">
-              Je suis praticienne bien-être, passionnée par l'accompagnement holistique. Mon approche combine des
+              Je suis praticienne bien-être, passionnée par l&apos;accompagnement holistique. Mon approche combine des
               techniques douces pour vous aider à retrouver équilibre et sérénité au quotidien.
             </p>
             <p className="text-stone-600 leading-relaxed mb-8">
@@ -32,7 +32,7 @@ export default function HomePage() {
 
       {/* Tarifs */}
       <Section id="tarifs" className="bg-beige-50">
-        <h2 className="section-title text-center mb-12">Tarifs & Prestations</h2>
+        <h2 className="section-title text-center mb-12">Tarifs &amp; Prestations</h2>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
           {[
             { title: 'Séance découverte', duration: '45 min', price: '45 €', desc: 'Première rencontre pour définir vos besoins.' },
@@ -53,10 +53,10 @@ export default function HomePage() {
       <Section id="zone" className="bg-white">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="section-title">Zone d'intervention</h2>
+            <h2 className="section-title">Zone d&apos;intervention</h2>
             <p className="text-stone-600 leading-relaxed mb-4">
               Je reçois en cabinet et me déplace à domicile dans un rayon de 30 km.
-              N'hésitez pas à me contacter pour vérifier votre secteur.
+              N&apos;hésitez pas à me contacter pour vérifier votre secteur.
             </p>
             <ul className="text-stone-600 text-sm space-y-1 list-disc list-inside">
               <li>Consultations en cabinet sur rendez-vous</li>
@@ -78,7 +78,7 @@ export default function HomePage() {
       <Section id="contact" className="bg-beige-50">
         <div className="max-w-xl mx-auto">
           <h2 className="section-title text-center">Me contacter</h2>
-          <p className="text-center text-stone-500 mb-10">Une question ? N'hésitez pas à m'écrire.</p>
+          <p className="text-center text-stone-500 mb-10">Une question ? N&apos;hésitez pas à m&apos;écrire.</p>
           <ContactForm />
         </div>
       </Section>
