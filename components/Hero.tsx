@@ -1,39 +1,64 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section className="relative bg-beige-100 min-h-[90vh] flex items-center">
-      {/* Subtle background texture */}
-      <div className="absolute inset-0 bg-gradient-to-br from-beige-100 via-beige-50 to-sage-50 opacity-80" />
-
-      <div className="relative max-w-5xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
-        <div>
-          <p className="text-sage-600 text-sm tracking-widest uppercase mb-4 font-worksans">
-            Praticienne bien-être
-          </p>
-          <h1 className="font-cormorant text-6xl md:text-7xl text-stone-800 leading-tight mb-8">
-            Retrouvez votre
-            <span className="block text-sage-600 italic">équilibre naturel</span>
-          </h1>
-          <p className="text-stone-600 text-lg leading-relaxed mb-10 font-worksans">
-            Un accompagnement doux et personnalisé pour prendre soin de vous, corps et esprit.
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <Link href="/rendez-vous" className="btn-primary">
-              Prendre rendez-vous
-            </Link>
-            <Link href="#presentation" className="btn-secondary">
-              En savoir plus
+    <header>
+      {/* Nav */}
+      <nav className="border-b border-beige-200 bg-white">
+        <div className="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
+          <div>
+            <p className="font-cormorant text-2xl text-stone-800 leading-tight">Catherine Dubois</p>
+            <p className="font-worksans text-sm text-sage-600 tracking-wide">Coach &amp; Hypnothérapeute</p>
+          </div>
+          <div className="flex items-center gap-6 text-sm font-worksans">
+            <Link href="/" className="text-sage-600 font-medium">Accueil</Link>
+            <Link href="#presentation" className="text-stone-600 hover:text-sage-600 transition-colors">La séance</Link>
+            <Link href="#contact" className="text-stone-600 hover:text-sage-600 transition-colors">Contact</Link>
+            <Link href="/rendez-vous" className="btn-primary !py-2 !px-5 text-xs">
+              Rendez-vous
             </Link>
           </div>
         </div>
+      </nav>
 
-        <div className="hidden md:flex items-center justify-center">
-          <div className="w-80 h-96 bg-sage-100 rounded-3xl flex items-center justify-center border border-sage-200">
-            <span className="font-cormorant text-2xl italic text-sage-400">Photo portrait</span>
+      {/* Hero banner */}
+      <div className="relative bg-stone-800 min-h-[380px] flex items-end overflow-hidden">
+        {/* Background image */}
+        <div className="absolute inset-0">
+          <Image
+            src="https://static.wixstatic.com/media/8d4d90_8fd15550fb844a2ea7d3eb9701679705~mv2.jpeg"
+            alt="Catherine Dubois – Coach &amp; Hypnothérapeute"
+            fill
+            className="object-cover object-top opacity-40"
+            priority
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-stone-900/80 via-stone-800/40 to-transparent" />
+        </div>
+
+        <div className="relative max-w-5xl mx-auto px-6 pb-16 pt-24">
+          <p className="text-sage-300 text-sm tracking-widest uppercase mb-3 font-worksans">
+            Coach certifiée HEC &amp; Hypnothérapeute
+          </p>
+          <h1 className="font-cormorant text-5xl md:text-7xl text-white leading-tight mb-6">
+            Retrouvez votre
+            <span className="block italic text-sage-300">liberté intérieure</span>
+          </h1>
+          <p className="text-stone-300 text-lg max-w-xl leading-relaxed mb-10 font-worksans">
+            Gestion du stress, confiance en soi, phobies, sevrage tabagique… Un accompagnement
+            professionnel et bienveillant pour vous aider à atteindre vos objectifs.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <a href="tel:0650433067" className="btn-primary">
+              Appeler 06.50.43.30.67
+            </a>
+            <Link href="/rendez-vous" className="btn-secondary !border-white !text-white hover:!bg-white/10">
+              Prendre rendez-vous
+            </Link>
           </div>
         </div>
       </div>
-    </section>
+    </header>
   );
 }

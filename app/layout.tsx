@@ -17,21 +17,16 @@ const workSans = Work_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'CathDub | Praticienne bien-être',
-  description: 'Prenez soin de vous. Séances de bien-être, accompagnement personnalisé et prise de rendez-vous en ligne.',
-  keywords: ['bien-être', 'praticienne', 'relaxation', 'rendez-vous'],
+  title: 'Catherine Dubois | Coach & Hypnothérapeute',
+  description:
+    'Catherine Dubois, Coach certifiée HEC et Hypnothérapeute. Séances d’hypnose et coaching pour gérer le stress, les phobies, le sevrage tabagique, la perte de poids et bien plus.',
+  keywords: ['hypnose', 'hypnothérapeute', 'coach', 'coaching', 'stress', 'phobies', 'sevrage tabagique'],
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr" className={`${cormorant.variable} ${workSans.variable}`}>
-      <body className="antialiased">
-        {children}
-      </body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }
