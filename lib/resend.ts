@@ -30,11 +30,11 @@ export async function sendBookingConfirmation(payload: BookingEmailPayload): Pro
       subject: 'Confirmation de votre rendez-vous',
       html: `
         <div style="font-family:Georgia,serif;max-width:520px;margin:auto;color:#3a3a3a">
-          <h2 style="color:#3d623d">Votre rendez-vous est confirmé</h2>
+          <h2 style="color:#3d623d">Votre rendez-vous est confirm\u00e9</h2>
           <p>Bonjour ${payload.name},</p>
-          <p>Votre séance est planifiée le <strong>${payload.date}</strong> à <strong>${payload.time}</strong>.</p>
-          <p>Je vous enverrai un rappel 24h avant. N'hésitez pas à me contacter en cas de besoin.</p>
-          <p style="margin-top:32px">À bientôt,<br/><em>CathDub</em></p>
+          <p>Votre s\u00e9ance est planifi\u00e9e le <strong>${payload.date}</strong> \u00e0 <strong>${payload.time}</strong>.</p>
+          <p>Je vous enverrai un rappel 24h avant. N'h\u00e9sitez pas \u00e0 me contacter en cas de besoin.</p>
+          <p style="margin-top:32px">\u00c0 bient\u00f4t,<br/><em>CathDub</em></p>
         </div>
       `,
     });
@@ -52,7 +52,7 @@ export async function sendContactEmail(payload: ContactEmailPayload): Promise<vo
     await resend.emails.send({
       from: FROM_EMAIL,
       to: ADMIN_EMAIL,
-      replyTo: payload.email,
+      reply_to: payload.email,
       subject: `Message de ${payload.name} via le site`,
       html: `
         <div style="font-family:Georgia,serif;max-width:520px;margin:auto;color:#3a3a3a">
